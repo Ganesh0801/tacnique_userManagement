@@ -1,21 +1,16 @@
 import { createTheme } from '@mui/material/styles';
 
-/**
- * Central design system for the dashboard. Kept in one file so every
- * component pulls consistent colors, spacing, and typography instead of
- * hard-coding one-off styles.
- */
 const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#4F46E5', // indigo
+      main: '#4F46E5', 
       light: '#818CF8',
       dark: '#3730A3',
       contrastText: '#ffffff',
     },
     secondary: {
-      main: '#0EA5A4', // teal accent
+      main: '#0EA5A4', 
     },
     background: {
       default: '#F5F6FA',

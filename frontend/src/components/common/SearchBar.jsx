@@ -4,10 +4,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import ClearIcon from '@mui/icons-material/Clear';
 import useDebounce from '../../hooks/useDebounce';
 
-/**
- * Free-text search box. Debounces internally and only calls onSearch once
- * the user pauses typing, so the parent never has to manage a timer.
- */
 const SearchBar = ({ onSearch, placeholder = 'Search users by name, email or department...' }) => {
   const [value, setValue] = useState('');
   const debouncedValue = useDebounce(value, 400);

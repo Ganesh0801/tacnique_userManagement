@@ -13,11 +13,6 @@ import {
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { EMPTY_FILTERS } from '../../utils/constants';
 
-/**
- * Popover-based filter form. Local draft state is separate from the
- * applied filters so typing doesn't trigger a fetch on every keystroke -
- * the query only runs once "Apply" is pressed.
- */
 const FilterPopup = ({ filters, onApply }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [draft, setDraft] = useState(filters);

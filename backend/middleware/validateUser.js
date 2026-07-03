@@ -1,10 +1,7 @@
 import { body, validationResult } from 'express-validator';
 import ApiError from '../utils/ApiError.js';
 
-/**
- * Shared validation rules for creating/updating a user. Used by both the
- * POST and PUT routes so the rules never drift out of sync.
- */
+
 export const userValidationRules = [
   body('firstName')
     .trim()
@@ -33,10 +30,6 @@ export const userValidationRules = [
     .withMessage('Department cannot exceed 50 characters'),
 ];
 
-/**
- * Reads the results collected by userValidationRules and short-circuits
- * the request with a 400 ApiError if anything failed.
- */
 export const runValidation = (req, res, next) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {

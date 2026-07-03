@@ -8,8 +8,6 @@ const axiosInstance = axios.create({
   headers: { 'Content-Type': 'application/json' },
 });
 
-// Normalizes every failure into a plain Error with a human-readable message,
-// so calling code never has to dig through error.response.data itself.
 axiosInstance.interceptors.response.use(
   (response) => response,
   (error) => {

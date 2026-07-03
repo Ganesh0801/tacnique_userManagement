@@ -3,11 +3,6 @@ import { SnackbarProvider, useSnackbar } from 'notistack';
 
 const NotifyContext = createContext(null);
 
-/**
- * Thin wrapper around notistack so the rest of the app can call
- * `notify.success('Saved!')` / `notify.error('Failed')` without importing
- * notistack directly everywhere.
- */
 const NotifyBridge = ({ children }) => {
   const { enqueueSnackbar } = useSnackbar();
 

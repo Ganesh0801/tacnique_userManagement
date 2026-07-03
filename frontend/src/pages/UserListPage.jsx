@@ -11,12 +11,6 @@ import ConfirmDialog from '../components/common/ConfirmDialog';
 import useUsers from '../hooks/useUsers';
 import { useNotify } from '../context/SnackbarContext';
 import { createUser, updateUser, deleteUser } from '../api/userApi';
-
-/**
- * Top-level page for the dashboard. Delegates all data-fetching state to
- * useUsers() and only owns the transient UI state for the add/edit dialog
- * and the delete confirmation dialog.
- */
 const UserListPage = () => {
   const {
     users,

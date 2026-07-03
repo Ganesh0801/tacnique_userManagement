@@ -2,12 +2,6 @@ import { useCallback, useEffect, useState } from 'react';
 import { fetchUsers } from '../api/userApi';
 import { DEFAULT_PAGE_SIZE, EMPTY_FILTERS } from '../utils/constants';
 
-/**
- * Owns every piece of state needed to render the user table: the current
- * page of data, loading/error flags, and the search/filter/sort criteria
- * that drive the API query. Keeping this in one hook means UserListPage
- * stays a thin presentational layer.
- */
 const useUsers = () => {
   const [users, setUsers] = useState([]);
   const [pagination, setPagination] = useState({ page: 1, limit: DEFAULT_PAGE_SIZE, totalCount: 0, totalPages: 1 });

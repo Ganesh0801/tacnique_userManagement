@@ -8,9 +8,6 @@ import userRoutes from './routes/userRoutes.js';
 import { notFound, errorHandler } from './middleware/errorHandler.js';
 
 dotenv.config();
-
-// Only connect to Mongo when this file is actually run (not when imported by tests,
-// which spin up their own in-memory database).
 if (process.env.NODE_ENV !== 'test') {
   connectDB();
 }

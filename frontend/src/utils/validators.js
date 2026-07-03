@@ -1,9 +1,5 @@
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-/**
- * Validates a user form payload and returns a field -> error message map.
- * An empty object means the form is valid.
- */
 export const validateUserForm = (values) => {
   const errors = {};
 

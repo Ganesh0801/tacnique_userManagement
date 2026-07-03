@@ -21,7 +21,6 @@ export const getUsers = asyncHandler(async (req, res) => {
 
   const query = {};
 
-  // Global search across all visible fields
   if (search) {
     const regex = new RegExp(search, 'i');
     query.$or = [
@@ -31,8 +30,6 @@ export const getUsers = asyncHandler(async (req, res) => {
       { department: regex },
     ];
   }
-
-  // Per-field filters (from the filter popup)
   if (firstName) query.firstName = new RegExp(firstName, 'i');
   if (lastName) query.lastName = new RegExp(lastName, 'i');
   if (email) query.email = new RegExp(email, 'i');

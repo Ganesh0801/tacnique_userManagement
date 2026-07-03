@@ -6,7 +6,7 @@ import axiosInstance from './axiosInstance';
  */
 export const fetchUsers = async (params) => {
   const { data } = await axiosInstance.get('/users', { params });
-  return data; // { success, data: User[], pagination }
+  return data;
 };
 
 export const fetchUserById = async (id) => {
